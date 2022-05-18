@@ -30,55 +30,58 @@ namespace Client
         private void InitializeComponent()
         {
             this.SendButton = new System.Windows.Forms.Button();
-            this.OutInfo = new System.Windows.Forms.RichTextBox();
-            this.InputInfo = new System.Windows.Forms.RichTextBox();
+            this.OutInfo = new System.Windows.Forms.TextBox();
+            this.InputInfo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SendButton
             // 
-            this.SendButton.Location = new System.Drawing.Point(477, 404);
+            this.SendButton.Location = new System.Drawing.Point(11, 242);
+            this.SendButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SendButton.Name = "SendButton";
-            this.SendButton.Size = new System.Drawing.Size(311, 34);
+            this.SendButton.Size = new System.Drawing.Size(218, 20);
             this.SendButton.TabIndex = 2;
-            this.SendButton.Text = "Отправить сообщение в чат";
+            this.SendButton.Text = "Отправить";
             this.SendButton.UseVisualStyleBackColor = true;
             this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
             // 
             // OutInfo
             // 
             this.OutInfo.Location = new System.Drawing.Point(12, 12);
+            this.OutInfo.Multiline = true;
             this.OutInfo.Name = "OutInfo";
             this.OutInfo.ReadOnly = true;
-            this.OutInfo.Size = new System.Drawing.Size(776, 315);
-            this.OutInfo.TabIndex = 3;
-            this.OutInfo.Text = "";
+            this.OutInfo.Size = new System.Drawing.Size(540, 183);
+            this.OutInfo.TabIndex = 5;
             // 
             // InputInfo
             // 
-            this.InputInfo.Location = new System.Drawing.Point(12, 333);
+            this.InputInfo.Location = new System.Drawing.Point(12, 201);
+            this.InputInfo.Multiline = true;
             this.InputInfo.Name = "InputInfo";
-            this.InputInfo.Size = new System.Drawing.Size(776, 65);
-            this.InputInfo.TabIndex = 4;
-            this.InputInfo.Text = "";
+            this.InputInfo.Size = new System.Drawing.Size(540, 36);
+            this.InputInfo.TabIndex = 6;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(560, 270);
             this.Controls.Add(this.InputInfo);
             this.Controls.Add(this.OutInfo);
             this.Controls.Add(this.SendButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button SendButton;
-        public System.Windows.Forms.RichTextBox OutInfo;
-        public System.Windows.Forms.RichTextBox InputInfo;
+        private System.Windows.Forms.TextBox OutInfo;
+        private System.Windows.Forms.TextBox InputInfo;
     }
 }
 
